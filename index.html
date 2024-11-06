@@ -1,0 +1,109 @@
+<html>
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Netocs ► Home ◄</title>
+	  
+	  
+	<link href="styles.css" rel="stylesheet"/>
+</head>
+
+<body style="background-image: url('backgrounde.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height:100vh; margin: 0;">
+
+<div class="square">
+  <p class="text">Voici un texte dans le carré.</p>
+  
+  <div class="button-container">
+    <button onclick="window.open('https://bacpro-ciel.fr/evan/', '_blank');">Evan</button>
+    <button onclick="window.open('https://bacpro-ciel.fr/mael/', '_blank');">Mael</button>
+    <button onclick="window.open('https://bacpro-ciel.fr/noam/', '_blank');">Noam</button>
+    <button onclick="window.open('https://bacpro-ciel.fr/matheo/', '_blank');">Matheo</button>
+  </div>
+
+
+
+<div class="test">
+  <h2>I---◄Bienvenu sur le site de Netocs►---I</h2>
+
+</div>
+    <!-- Le bouton pour afficher la page -->
+    <button class="btn" onclick="togglePage()">◄-------</button>
+
+    <!-- La page qui apparaît à gauche -->
+    <div class="page-left" id="leftPage">
+        <button class="close-btn" onclick="togglePage()">-------►</button> <!-- Bouton pour fermer la page -->
+		<br><br><br>
+        <h1>Paramètre</h1><br>
+         <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tableau </h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Ville</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Evan</td>
+                <td>152</td>
+                <td>Lagaloche</td>
+            </tr>
+            <tr>
+                <td>Mael</td>
+                <td>1</td>
+                <td>Boutre</td>
+            </tr>
+            <tr>
+                <td>Noam</td>
+                <td>800</td>
+                <td>Marseille</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script>
+        // Fonction pour afficher/masquer la page
+        function togglePage() {
+            var page = document.getElementById('leftPage');
+            page.classList.toggle('active'); // Ajoute ou enlève la classe 'active' pour afficher ou masquer la page
+        }
+    </script>
+	
+<div class="image-container">
+  <img src="oiseau.jpg" class="image">
+  <img src="oiseau1.jpg" class="image">
+  <img src="oiseau2.jpg" class="image">
+  <img src="img1.png" class="image">
+</div>
+
+
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <!-- Les messages du chat apparaîtront ici -->
+    </div>
+    <input type="text" id="user-input" placeholder="Tapez un message..." />
+    <button id="send-btn">Envoyer</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

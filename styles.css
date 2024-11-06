@@ -1,0 +1,223 @@
+/* ----------------------------- GENERAL STYLES ----------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box; /* Assure que le padding et la bordure ne perturbent pas les dimensions */
+}
+
+/* ---------------------------- BAR DU HAUT----------------------------- */
+.test {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  z-index: 1000;
+}
+/* ---------------------------- BUTTON SITE AMIS---------------------------- */
+
+.button-container {
+  position: absolute;
+  top: 60px; /* Marge depuis le haut */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  height: 50px;
+  width: 120px;
+  background: linear-gradient(145deg, #2e2d2d, #212121);
+  color: rgb(161, 161, 161);
+  border: solid #404c5d 1px;
+  border-radius: 5px;
+  font-family: Consolas, Courier New, monospace;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  transition: 500ms;
+}
+
+button:hover {
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+}
+
+button:active {
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  transition: 100ms;
+}
+
+/* ---------------------------- CARRE DU MILIEU ---------------------------- */
+.square {
+  width: 450px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ---------------------------- PAGE A GAUCHE---------------------------- */
+.page-left {
+  position: fixed;
+  top: 0;
+  left: -350px; /* La page commence hors de l'écran à gauche */
+  width: 300px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Lorsque la page devient visible */
+.page-left.active {
+  left: 0; /* La page glisse à gauche */
+}
+/* ---------------------------- BOTTON FERME LA PAGE ---------------------------- */
+.close-btn {
+  position: absolute;
+  top: 90px;
+  right: 3px;
+  padding: 2px 5px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background-color: #e53935;
+}
+
+
+/* ---------------------------- BUTTON POUR ALLER SUR LA PAGE---------------------------- */
+.btn {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* ---------------------------- 4 IMAGES EN BAH AU MILIEU---------------------------- */
+
+.image-container {
+  display: flex; /* Affichage des images sur une ligne */
+  gap: 10px; /* Espace entre les images */
+}
+
+.image {
+  width: 100px; /* Largeur de chaque image */
+  height: 100px; /* Hauteur de chaque image */
+  border-radius: 10px; /* Bordures arrondies */
+  object-fit: cover; /* Ajuste l'image sans la déformer */
+  margin-top: 300px; /* Décale les images vers le bas */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.chat-box {
+  padding: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.user-message {
+  text-align: right;
+  font-weight: bold;
+}
+
+.bot-message {
+  text-align: left;
+  color: #555;
+}
